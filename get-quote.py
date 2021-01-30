@@ -7,8 +7,12 @@ def primary():
   f.close()
 
   rnd = random.randint(0, len(quotes)-1)
+  chosen = quotes[rnd]
+  
+  if chosen[-1:] == '\n':
+    chosen = chosen[:-1]
 
-  print(quotes[rnd])
+  print(chosen)
 
 if __name__== "__main__":
   primary()
